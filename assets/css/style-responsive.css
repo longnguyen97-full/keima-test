@@ -1,0 +1,19 @@
+/* On screens that are 992px wide or less */
+@media only screen and (max-width: 992px) {
+    .card-list {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .card-item {
+        flex: 0 0 33.3333%;
+    }
+}
+
+/* On screens that are 600px wide or less */
+@media only screen and (max-width: 600px) {
+    .card-list {
+        flex-direction: column;
+        gap: 80px;
+    }
+}

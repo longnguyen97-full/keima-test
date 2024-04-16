@@ -1,0 +1,132 @@
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* STYLING */
+/* COMMON */
+:root {
+    --color-primary: #56737f;
+    --color-primary-50: #56737f73;
+    --color-primary-100: #2c404a;
+    --color-secondary: #8ad12d;
+    --color-ternary: #ec7501;
+    --color-white: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.space {
+    height: 20px;
+}
+
+.bg-green {
+    background-color: var(--color-secondary) !important;
+}
+
+/* POST CARDS */
+#post-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* CARD LIST */
+.card-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* CARD ITEM */
+.card-item {
+    width: 100%;
+    border: 1px solid var(--color-primary-50);
+}
+
+/* MEDIA */
+.card-item .media {
+    position: relative;
+}
+
+.media img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.media .tag {
+    position: absolute;
+    right: 0;
+    background-color: var(--color-ternary);
+    padding: 2px 18px;
+    color: var(--color-white);
+    font-size: 13px;
+    /* skew 1 corner */
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* DETAILS */
+.card-item .details {
+    padding: 14px;
+    line-height: 30px;
+}
+
+.details .category {
+    color: var(--color-primary);
+    background-color: var(--color-primary);
+    padding: 4px 10px;
+    color: var(--color-white);
+    font-size: 13px;
+}
+
+.details .description {
+    color: var(--color-primary);
+    font-size: 13px;
+}
+
+.details hr {
+    border-top: 1px solid var(--color-primary);
+    margin: 8px 0;
+}
+
+.details .title {
+    color: var(--color-primary-100);
+    overflow: hidden;
+    display: -webkit-box;
+    /* number of lines to show */
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.details .read-more {
+    color: var(--color-primary-100);
+    font-weight: bold;
+    text-decoration: none;
+    float: right;
+    clear: both;
+}
+
+.details .read-more::before {
+    content: "";
+    display: inline-block;
+    border-right: 3px solid var(--color-primary-100);
+    border-bottom: 3px solid var(--color-primary-100);
+    width: 6px;
+    height: 6px;
+    transform: rotate(-45deg);
+    margin-right: 10px;
+}
