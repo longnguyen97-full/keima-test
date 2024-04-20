@@ -37,17 +37,10 @@ body {
 
 /* POST CARDS */
 #post-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* CARD LIST */
-.card-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
 }
 
 /* CARD ITEM */

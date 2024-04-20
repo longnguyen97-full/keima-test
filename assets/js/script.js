@@ -4,6 +4,7 @@
 // define variables
 const numbers = [4, 35, 80, 123, 12345, 44, 8, 5, 24, 3, 22];
 const limit = 4;
+const pads = Math.max(...numbers).toString().length + 1;
 
 // validate data
 function validateData(numbers, limit) {
@@ -28,9 +29,9 @@ function validateData(numbers, limit) {
     return true;
 }
 
-// pad 6 spaces to before number
+// pad spaces based on (length of max number + 1) to before number
 function formatNumber(num) {
-    return num.toString().padStart(6);
+    return num.toString().padStart(pads);
 }
 
 // display number as a table
